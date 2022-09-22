@@ -89,7 +89,7 @@ public class UserServiceImpl implements UserService {
 			log.info("current user: " + username);
 		} else {
 			username = principal.toString();
-			log.info("default user: " + username);
+			log.info("default user:  " + username);
 		}
 
 		User user = userRepository.findByUsername(username);
