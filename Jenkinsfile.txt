@@ -57,6 +57,18 @@ pipeline {
             }
         }
 		//Code ends for stage Unit Test	
+		
+	//code starts code coverage
+	stage('Code Coverage'){
+		steps{
+			//generate coverage report
+			step([
+				$class: 'JacocoPublisher'
+			])
+		}
+	}
+	
+	//code ends code coverage
 	
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
     }
